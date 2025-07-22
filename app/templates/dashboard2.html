@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Slim">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/slim">
+    <meta property="og:title" content="Slim">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+    <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
+
+    <title>Power BI Dashboard</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <style>
+    .pbi-wrapper {
+      position: relative;
+      width: 100vw;          /* fill the Bootstrap column */
+      max-width: 1000px;
+      height: 0;
+      padding-bottom: 50%;  /* tweak this percentage for a taller/shorter aspect */
+      overflow: hidden;
+      margin: 0 auto;       /* centers it if it ever gets narrower than its col */
+    }
+    .pbi-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;  height: 100%;
+      border: none;
+    }
+    .dash-headline-left {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+
+  <link rel="stylesheet" href="../css/slim.css">
+
+  </head>
+  <body>
+    <div class="slim-header">
+      <div class="container">
+        <div class="slim-header-left">
+          <h2 class="slim-logo"><a href="index.html">SynapSense<span>.</span></a></h2>
+        </div><!-- slim-header-left -->
+      </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="index.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Dashboard</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="index.html">Overall Dashboard</a></li>
+                <li><a href="dashboard2.html">Stress Dashboard</a></li>
+                <li><a href="dashboard3.html">Depression Dashboard</a></li>
+                <li><a href="dashboard4.html">Anxiety Dashboard</a></li>
+              </ul>
+            </div>
+          </li>
+          </li>
+   
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="page-predict.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Predict</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="predict-stress.html">Predict Stress</a></li>
+                <li><a href="predict-Depression.html">Predict Depression</a></li>
+                <li><a href="predict-Anxiety.html">Predict Anxiety</a></li>
+              </ul>
+            </div><!-- dropdown-menu -->
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="page-profile.html">
+              <i class="icon ion-ios-book-outline"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+
+        </ul>
+      </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <div class="slim-mainpanel">
+      <div class="container-fluid">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+          </ol>
+          <h6 class="slim-pagetitle"></h6>
+        </div><!-- slim-pageheader -->
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-12 col-xl-10">
+            <div class="pbi-wrapper">
+              <iframe
+                src="https://app.powerbi.com/view?r=eyJrIjoiZDQ2YTBmYzQtNmJjMy00OGMyLTgyYjMtMTQxMWZlMGEwYjdjIiwidCI6ImJjMTI0M2I3LTJhYzItNDExMy1hZGE4LWMwZWNjM2QwNjk3ZSIsImMiOjN9&amp;navContentPaneEnabled=false&amp;filterPaneEnabled=false"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div><!-- dash-headline-left -->
+        </div><!-- dash-headline -->
+      </div><!-- container-fluid -->
+    </div><!-- slim-mainpanel -->
+
+    <div class="slim-footer">
+      <div class="container">
+        <p>Copyright 2025 &copy; All Rights Reserved.</p>
+        <p>Designed by: <a href="">SynapSense</a></p>
+      </div><!-- container -->
+    </div><!-- slim-footer -->
+
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../lib/chartist/js/chartist.js"></script>
+    <script src="../lib/d3/js/d3.js"></script>
+    <script src="../lib/rickshaw/js/rickshaw.min.js"></script>
+    <script src="../lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/slim.js"></script>
+  </body>
+</html>

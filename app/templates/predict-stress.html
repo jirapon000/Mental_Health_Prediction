@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Slim">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/slim">
+    <meta property="og:title" content="Slim">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+    <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
+
+    <title>Slim Responsive Bootstrap 4 Admin Template</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="../css/slim.css">
+
+  </head>
+  <body>
+    <div class="slim-header">
+      <div class="container">
+        <div class="slim-header-left">
+          <h2 class="slim-logo"><a href="page-profile.html">SynapSense<span>.</span></a></h2>
+        </div><!-- slim-header-left -->
+      </div><!-- container -->
+    </div><!-- slim-header -->
+
+    <div class="slim-navbar">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="index.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Dashboard</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="index.html">Overall Dashboard</a></li>
+                <li><a href="dashboard2.html">Stress Dashboard</a></li>
+                <li><a href="dashboard3.html">Depression Dashboard</a></li>
+                <li><a href="dashboard4.html">Anxiety Dashboard</a></li>
+              </ul>
+            </div>
+          </li>
+   
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="page-predict.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Predict</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="predict-stress.html">Predict Stress</a></li>
+                <li><a href="predict-Depression.html">Predict Depression</a></li>
+                <li><a href="predict-Anxiety.html">Predict Anxiety</a></li>
+              </ul>
+            </div><!-- dropdown-menu -->
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="page-profile.html">
+              <i class="icon ion-ios-book-outline"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+
+        </ul>
+      </div><!-- container -->
+    </div><!-- slim-navbar -->
+
+    <!-- Main Panel -->
+    <div class="slim-mainpanel">
+      <div class="container">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="page-predict.html">Mental health Prediction System</a></li>
+          </ol>
+          <h6 class="slim-pagetitle">Stress Level Prediction</h6>
+        </div><!-- slim-pageheader -->
+
+        <div class="row justify-content-center">
+          <div class="col-lg-12 col-md-12">
+            <div class="card mg-t-20">
+              <div class="card-body">
+                <form id="predictForm">
+                <div class="row">
+                  <!-- Left Column: Demographic Information -->
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Demographic Information</h5>
+                    <!-- Age -->
+                    <div class="form-group">
+                      <label for="ageSelect">Age Group</label>
+                      <select id="ageSelect" class="form-control" required>
+                        <option value="" disabled selected>Select age group</option>
+                        <option value="Below 18">Below 18</option>
+                        <option value="18-22">18-22</option>
+                        <option value="23-26">23-26</option>
+                        <option value="27-30">27-30</option>
+                        <option value="Above 30">Above 30</option>
+                      </select>
+                    </div>
+                    <!-- Gender -->
+                    <div class="form-group">
+                      <label for="genderSelect">Gender</label>
+                      <select id="genderSelect" class="form-control" required>
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+                    <!-- Academic Year -->
+                    <div class="form-group">
+                      <label for="yearSelect">Academic Year</label>
+                      <select id="yearSelect" class="form-control" required>
+                        <option value="" disabled selected>Select year</option>
+                        <option value="Year 1">Year 1</option>
+                        <option value="Year 2">Year 2</option>
+                        <option value="Year 3">Year 3</option>
+                        <option value="Year 4">Year 4</option>
+                        <option value="Graduated">Graduated</option>
+                      </select>
+                    </div>
+                    <!-- Scholarship -->
+                    <div class="form-group">
+                      <label for="scholarshipSelect">Did you receive a waiver or scholarship at your university?</label>
+                      <select id="scholarshipSelect" class="form-control" required>
+                        <option value="" disabled selected>Have scholarship?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </div>
+                    <!-- CGPA -->
+                    <div class="form-group">
+                      <label for="cgpaSelect">Current CGPA</label>
+                      <select id="cgpaSelect" class="form-control" required>
+                        <option value="" disabled selected>Select CGPA range</option>
+                        <option value="Below 2.50">Below 2.50</option>
+                        <option value="2.50 - 2.99">2.50 - 2.99</option>
+                        <option value="3.00 - 3.39">3.00 - 3.39</option>
+                        <option value="3.40 - 3.79">3.40 - 3.79</option>
+                        <option value="3.80 - 4.00">3.80 - 4.00</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <!-- Department -->
+                    <div class="form-group">
+                      <label for="departmentSelect">Department</label>
+                      <select id="departmentSelect" class="form-control" required>
+                        <option value="" disabled selected>Select department</option>
+                        <option value="Biological Sciences">Biological Sciences</option>
+                        <option value="Business & Entrepreneurship">Business & Entrepreneurship</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Computer Engineering / CS">Computer Engineering / CS</option>
+                        <option value="Electrical / Electronics Engineering">Electrical / Electronics Engineering</option>
+                        <option value="Env & Life Sciences">Env & Life Sciences</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Other">Other</option>
+                        <option value="Other Engineering">Other Engineering</option>
+                        <option value="Pharmacy / Public Health">Pharmacy / Public Health</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Right Column: Stress Assessment -->
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Stress Assessment</h5>
+                    <div class="form-group">
+                      <label>1. In a semester, how often have you felt upset due to something that happened in your academic affairs?</label>
+                      <select class="form-control" id="Stress_UpsetAcademic" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>2. In a semester, how often have you felt as if you were unable to control important things in your academic affairs?</label>
+                      <select class="form-control" id="Stress_LossOfControl" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>3. In a semester, how often have you felt nervous and stressed because of academic pressure?</label>
+                      <select class="form-control" id="Stress_NervousStressed" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>4. In a semester, how often have you felt as if you could not cope with all the mandatory academic activities? (e.g, assignments, quiz, exams)</label>
+                      <select class="form-control" id="Stress_OverwhelmedByTasks" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>5. In a semester, how often have you felt confident about your ability to handle your academic / university problems?</label>
+                      <select class="form-control" id="Stress_ConfidentHandling" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>6. In a semester, how often have you felt as if things in your academic life is going on your way?</label>
+                      <select class="form-control" id="Stress_OnTrack" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>7. In a semester, how often are you able to control irritations in your academic / university affairs?</label>
+                      <select class="form-control" id="Stress_ControlIrritation" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>8. In a semester, how often have you felt as if your academic performance was on top?</label>
+                      <select class="form-control" id="Stress_Performance" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>9. In a semester, how often have you got angered due to bad performance or low grades that is beyond your control?</label>
+                      <select class="form-control" id="Stress_AngeredByGrades" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>10. In a semester, how often have you felt as if academic difficulties are piling up so high that you could not overcome them?</label>
+                      <select class="form-control" id="Stress_DifficultiesPileUp" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">Never</option>
+                        <option value="1">Seldom</option>
+                        <option value="2">Sometimes</option>
+                        <option value="3">Often</option>
+                        <option value="4">Always</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Predict Stress Level</button>
+              </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- container -->
+    </div><!-- slim-mainpanel -->
+
+ <!-- Footer -->
+    <div class="slim-footer">
+      <div class="container">
+        <p>Copyright 2025 &copy; All Rights Reserved.</p>
+        <p>Designed by: <a href="">SynapSense</a></p>
+      </div><!-- container -->
+    </div><!-- slim-footer -->
+
+
+
+    <!-- SCRIPTS -->
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../js/slim.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('#predictForm').on('submit', function(e) {
+        e.preventDefault();
+
+        // Encoding maps
+        const genderMap = { 'Male': 0, 'Female': 1 };
+        const yearMap = {
+          'Year 1': 1, 'Year 2': 2,
+          'Year 3': 3, 'Year 4': 4,
+          'Graduated': 5
+        };
+        const scholarshipMap = { 'Yes': 1, 'No': 0 };
+        const cgpaMap = {
+          'Below 2.50': 0, '2.50 - 2.99': 1,
+          '3.00 - 3.39': 2, '3.40 - 3.79': 3,
+          '3.80 - 4.00': 4, 'Other': -1
+        };
+
+        // Collect & encode
+        const ageGroup   = $('#ageSelect').val();
+        if (!ageGroup) {
+          alert('Please select an age group.');
+          $('#ageSelect').focus();
+          return false;
+        }
+        const gender     = genderMap[$('#genderSelect').val()];
+        const year       = yearMap[$('#yearSelect').val()];
+        const scholarship= scholarshipMap[$('#scholarshipSelect').val()];
+        const cgpa       = cgpaMap[$('#cgpaSelect').val()];
+        const department = $('#departmentSelect').val();
+
+        const stressResponses = {
+          Stress_UpsetAcademic:      $('#Stress_UpsetAcademic').val(),
+          Stress_LossOfControl:      $('#Stress_LossOfControl').val(),
+          Stress_NervousStressed:    $('#Stress_NervousStressed').val(),
+          Stress_OverwhelmedByTasks: $('#Stress_OverwhelmedByTasks').val(),
+          Stress_ConfidentHandling:  $('#Stress_ConfidentHandling').val(),
+          Stress_OnTrack:            $('#Stress_OnTrack').val(),
+          Stress_ControlIrritation:  $('#Stress_ControlIrritation').val(),
+          Stress_Performance:        $('#Stress_Performance').val(),
+          Stress_AngeredByGrades:    $('#Stress_AngeredByGrades').val(),
+          Stress_DifficultiesPileUp: $('#Stress_DifficultiesPileUp').val()
+        };
+
+        const data = {
+          Age: ageGroup,
+          Gender: gender,
+          Year: year,
+          Scholarship: scholarship,
+          CGPA: cgpa,
+          Departments: department,
+          ...stressResponses
+        };
+
+        // POST & redirect
+        $.ajax({
+          url: '/predict-stress',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(data),
+          success: function(response) {
+            const params = new URLSearchParams({
+              result: response.result,
+              recommendation: response.recommendation,
+              gauge_type: response.gauge_type,
+              gauge_value: response.gauge_value
+            });
+            window.location.href = '/predict-result-stress.html?' + params.toString();
+          },
+          error: function(xhr, status, error) {
+            alert('Prediction failed: ' + error);
+          }
+        });
+      });
+    });
+    </script>
+  </body>
+</html>

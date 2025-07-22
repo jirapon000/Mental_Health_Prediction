@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Prediction Result</title>
+
+  <!-- your CSS includes -->
+  <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/slim.css">
+
+  <style>
+    body {
+      background: #f6f8fb;
+      font-family: "Segoe UI", "Arial", sans-serif;
+    }
+
+    #gauge-bar-container {
+      margin: 25px auto 16px;
+      max-width: 400px;
+    }
+
+    #gauge-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      background: #f6f9fc;
+      border-radius: 32px;
+      padding: 36px 18px 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .gauge-emoji-cell {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      min-width: 60px;
+      position: relative;    /* ← necessary for the ::after arrow */
+    }
+
+    /* draw the ▲ under the selected cell */
+    .gauge-emoji-cell.selected::after {
+      content: "";
+      position: absolute;
+      top: 20px;   /* ← increase this value for more space below the emoji */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.7em;  /* or as you prefer */
+      color: #1976d2;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+  .gauge-emoji-inner {
+    background: #dedede;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 0;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    border: 2px solid transparent;
+    transition: border-color .15s, transform .18s cubic-bezier(.19,1,.22,1), box-shadow .18s cubic-bezier(.19,1,.22,1);
+  }
+
+  .gauge-emoji-cell.selected .gauge-emoji-inner {
+    border-color: #1976d2;
+    background: #fff;
+    transform: scale(1.5);
+    box-shadow:
+      0 0 0 7px #e3ecfa,
+      0 4px 18px rgba(25, 118, 210, 0.15),
+      0 2px 8px rgba(0,0,0,0.20);
+    z-index: 2;
+  }
+
+    .card {
+      background: #fff;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 18px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      padding: 24px 30px 32px;
+    }
+
+    .card-body h2 {
+      margin-bottom: 8px;  /* reduce or use 0 if you want no gap */
+    }
+
+    .btn {
+      padding: 8px 22px;
+      font-size: 1.1em;
+      color: #fff;
+      background: #1976d2;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+</head>
+<body>
+  <!-- Header -->
+  <div class="slim-header">
+    <div class="container">
+      <div class="slim-header-left">
+        <h2 class="slim-logo">
+          <a href="page-profile.html">SynapSense<span>.</span></a>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="slim-navbar">
+    <div class="container">
+      <ul class="nav">
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="index.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Dashboard</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="index.html">Overall Dashboard</a></li>
+                <li><a href="dashboard2.html">Stress Dashboard</a></li>
+                <li><a href="dashboard3.html">Depression Dashboard</a></li>
+                <li><a href="dashboard4.html">Anxiety Dashboard</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+        <li class="nav-item with-sub">
+          <a class="nav-link" href="page-predict.html">
+            <i class="icon ion-ios-analytics-outline"></i>
+            <span>Predict</span>
+          </a>
+          <div class="sub-item">
+            <ul>
+              <li><a href="predict-stress.html">Predict Stress</a></li>
+              <li><a href="predict-Depression.html">Predict Depression</a></li>
+              <li><a href="predict-Anxiety.html">Predict Anxiety</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page-profile.html">
+            <i class="icon ion-ios-book-outline"></i>
+            <span>About Us</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slim-mainpanel">
+    <div class="container">
+      <div class="slim-pageheader">
+        <ol class="breadcrumb slim-breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Mental Health Prediction System</a></li>
+        </ol>
+        <h6 class="slim-pagetitle">Prediction Result</h6>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2>Your Prediction Result:</h2>
+
+              <!-- Gauge bar (no arrow-inner here!) -->
+              <div id="gauge-bar-container">
+                <div id="gauge-bar"></div>
+              </div>
+
+              <!-- The result label -->
+              <div style="font-size:1.7em; font-weight:bold; margin:20px 0;">
+                {{ result }}
+              </div>
+
+              {% if recommendation %}
+              <div style="text-align:left; margin:30px 0 10px;">
+                <h4>Our Recommendation:</h4>
+                <div style="background:#f6f9fc;
+                            padding:18px 24px;
+                            border-radius:6px;
+                            font-size:1.15em;
+                            line-height:1.6;">
+                  {%- set rec = recommendation.split(':',1)[1] if ':' in recommendation else recommendation -%}
+                  {{ rec.strip() }}
+                </div>
+              </div>
+              {% endif %}
+
+              <a href="/page-predict.html" class="btn">Predict Again</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- your footer here… -->
+
+  <!-- scripts -->
+  <script src="../lib/jquery/js/jquery.js"></script>
+  <script src="../lib/popper.js/js/popper.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.js"></script>
+  <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+  <script src="../js/slim.js"></script>
+
+  <script>
+    // 1️⃣ Get your three arrays from Jinja
+    const gaugeLevels = {{ gauge_data[gauge_type]['levels'] | tojson }};
+    const gaugeIcons  = {{ gauge_data[gauge_type]['icons']  | tojson }};
+    const gaugeColors = {{ gauge_data[gauge_type]['colors'] | tojson }};
+
+    // 2️⃣ Grab the result text (e.g. "Severe Anxiety")
+    const resultText = "{{ result }}".toLowerCase().trim();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const bar = document.getElementById('gauge-bar');
+      bar.innerHTML = '';  // wipe any leftover
+
+      // 3️⃣ Build each cell and mark `.selected` by matching the prefix of `resultText`
+      gaugeLevels.forEach((level, i) => {
+        const cell = document.createElement('div');
+        const isSel = resultText.startsWith(level.toLowerCase());
+        cell.className = 'gauge-emoji-cell' + (isSel ? ' selected' : '');
+        cell.innerHTML = `
+          <div class="gauge-emoji-inner" style="background:${gaugeColors[i]}">
+            ${gaugeIcons[i]}
+          </div>
+          <div style="font-size:0.95em; margin-top:25px; color:#666;">
+            ${level}
+          </div>`;
+        bar.appendChild(cell);
+      });
+    });
+  </script>
+</body>
+</html>

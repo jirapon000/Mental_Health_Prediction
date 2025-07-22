@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mental health prediction system for stress, depression, and anxiety.">
+    <title>SynapSense - Mental Health Prediction</title>
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/slim.css">
+    <style>
+      .hover-shadow:hover {
+        box-shadow: 0 8px 24px rgba(90,90,180,0.18);
+        transition: box-shadow 0.2s;
+      }
+      .prediction-card-btn img, .prediction-card-btn i {
+        width: 50px; height: 50px; margin-bottom: 10px;
+      }
+      .prediction-card {
+        min-height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: 100%;
+      }
+      .prediction-card .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        min-height: 400px;
+      }
+      .prediction-desc {
+        text-align: left;
+        margin-top: 10px;
+        color: #000; /* Black color for explanation */
+        font-size: 15px;
+        width: 100%;
+      }
+      .prediction-desc ul {
+        padding-left: 20px;
+        margin-bottom: 0;
+      }
+      .prediction-desc li {
+        color: #000;
+      }
+      .common-symptoms-label {
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      @media (max-width: 991px) {
+        .prediction-card {
+          min-height: 520px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slim-header">
+      <div class="container">
+        <div class="slim-header-left">
+          <h2 class="slim-logo"><a href="index.html">SynapSense<span>.</span></a></h2>
+        </div>
+      </div>
+    </div>
+    <div class="slim-navbar">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="index.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Dashboard</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="index.html">Overall Dashboard</a></li>
+                <li><a href="dashboard2.html">Stress Dashboard</a></li>
+                <li><a href="dashboard3.html">Depression Dashboard</a></li>
+                <li><a href="dashboard4.html">Anxiety Dashboard</a></li>
+              </ul>
+            </div>
+          </li>
+          
+          <li class="nav-item with-sub">
+            <a class="nav-link" href="page-predict.html">
+              <i class="icon ion-ios-analytics-outline"></i>
+              <span>Predict</span>
+            </a>
+            <div class="sub-item">
+              <ul>
+                <li><a href="predict-stress.html">Predict Stress</a></li>
+                <li><a href="predict-Depression.html">Predict Depression</a></li>
+                <li><a href="predict-Anxiety.html">Predict Anxiety</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page-profile.html">
+              <i class="icon ion-ios-book-outline"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main Panel -->
+    <div class="slim-mainpanel">
+      <div class="container">
+        <div class="slim-pageheader">
+          <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="page-predict.html">Mental health Prediction System</a></li>
+          </ol>
+          <h6 class="slim-pagetitle">Mental Health Prediction</h6>
+        </div>
+        <!-- 3 Button Cards Row -->
+        <div class="row justify-content-center mb-4">
+          <!-- Stress Prediction Card -->
+          <div class="col-md-4 d-flex">
+            <a href="predict-stress.html" class="text-decoration-none prediction-card-btn w-100">
+              <div class="card text-center hover-shadow prediction-card" style="cursor:pointer;">
+                <div class="card-body">
+                  <img src="../img/Emoji%20Emotion/Stress.png" alt="Stress" style="width:60px;height:60px;">
+                  <h5 class="mt-2">Stress Prediction</h5>
+                  <div class="prediction-desc">
+                    Stress is the body’s natural response to challenges or demands. While some stress can be motivating, excessive or ongoing stress can negatively affect both mental and physical health. Students commonly experience stress due to academic pressure, finances, and social expectations.
+                    <div class="common-symptoms-label">Common symptoms include:</div>
+                    <ul>
+                      <li>Feeling overwhelmed or out of control</li>
+                      <li>Difficulty focusing or sleeping</li>
+                      <li>Frequent headaches or fatigue</li>
+                      <li>Mood swings or emotional outbursts</li>
+                      <li>Reduced academic performance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Depression Prediction Card -->
+          <div class="col-md-4 d-flex">
+            <a href="predict-Depression.html" class="text-decoration-none prediction-card-btn w-100">
+              <div class="card text-center hover-shadow prediction-card" style="cursor:pointer;">
+                <div class="card-body">
+                  <img src="../img/Emoji%20Emotion/Depress.png" alt="Depression" style="width:60px;height:60px;">
+                  <h5 class="mt-2">Depression Prediction</h5>
+                  <div class="prediction-desc">
+                    Depression is a mood disorder marked by persistent sadness and a loss of interest in daily activities. It can significantly interfere with everyday life and academic performance if left unaddressed.
+                    <div class="common-symptoms-label">Common symptoms include:</div>
+                    <ul>
+                      <li>Loss of motivation and energy</li>
+                      <li>Feelings of worthlessness or hopelessness</li>
+                      <li>Changes in appetite and sleep</li>
+                      <li>Trouble concentrating</li>
+                      <li>Thoughts of self-harm or suicide</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Anxiety Prediction Card -->
+          <div class="col-md-4 d-flex">
+            <a href="predict-Anxiety.html" class="text-decoration-none prediction-card-btn w-100">
+              <div class="card text-center hover-shadow prediction-card" style="cursor:pointer;">
+                <div class="card-body">
+                  <img src="../img/Emoji%20Emotion/Anxiety.png" alt="Anxiety" style="width:60px;height:60px;">
+                  <h5 class="mt-2">Anxiety Prediction</h5>
+                  <div class="prediction-desc">
+                    Anxiety is characterized by ongoing and excessive worry, nervousness, or fear, even when there is little or no reason for concern. Persistent anxiety can interfere with concentration, decision-making, and sleep, impacting students’ academic and personal lives.
+                    <div class="common-symptoms-label">Common symptoms include:</div>
+                    <ul>
+                      <li>Feeling on edge or restless</li>
+                      <li>Uncontrollable worry</li>
+                      <li>Trouble relaxing</li>
+                      <li>Irritability</li>
+                      <li>Physical symptoms like a racing heart or shortness of breath</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="slim-footer">
+      <div class="container">
+        <p>Copyright 2025 &copy; All Rights Reserved.</p>
+        <p>Designed by: <a href="">SynapSense</a></p>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../lib/jquery/js/jquery.js"></script>
+    <script src="../lib/popper.js/js/popper.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/jquery.cookie/js/jquery.cookie.js"></script>
+    <script src="../js/slim.js"></script>
+  </body>
+</html>
