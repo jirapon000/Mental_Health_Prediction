@@ -41,8 +41,6 @@ It includes responses from university students on mental health indicators such 
 
 This data was cleaned and preprocessed to be suitable for machine learning classification tasks.
 
----
-
 ## 🧠 Machine Learning Model
 
 The core predictive engine of the application is a **Support Vector Machine (SVM)** classifier.
@@ -63,8 +61,6 @@ The core predictive engine of the application is a **Support Vector Machine (SVM
   - F1-Score
 
 Each mental health condition is trained and evaluated separately using SVM to ensure tailored predictions per category.
-
----
 
 ## 📊 Dashboard Overview
 
