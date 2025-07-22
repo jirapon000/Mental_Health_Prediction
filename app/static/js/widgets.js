@@ -92,7 +92,7 @@ $(function(){
     zoom: 14,
     lat: 40.702247,
     lng: -73.996349,
-    key: 'AIzaSyAEt_DBLTknLexNbTVwbXyq2HSf2UbRBU8',
+    key: '#APIKey',
     styles: styleMapBox
   });
 
